@@ -36,7 +36,7 @@ jobs:
       uses: datamonsters/replace-action@v2
       id: sub
       with:
-        files: 'remote/wwwroot/service-worker.published.js'
+        files: 'BlazorTest/wwwroot/service-worker.published.js'
         replacements: '%%CACHE_VERSION%%=${{ github.run_id }}'
 
     # add .nojekyll file to tell GitHub pages to not treat this as a Jekyll project. (Allow files and folders starting with an underscore)
