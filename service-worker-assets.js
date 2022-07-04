@@ -261,7 +261,7 @@
       "url": "icon-512.png"
     },
     {
-      "hash": "sha256-wOqg7qdx+\/0taFCtJ4nMrwwYbarjfWGN6wZ\/bb4+fU8=",
+      "hash": "sha256-VC8DEPbe9DWKulmT7y5mjrqv8H7fhzMRqte0o36NaRQ=",
       "url": "index.html"
     },
     {
@@ -273,5 +273,5 @@
       "url": "sample-data\/weather.json"
     }
   ],
-  "version": "tuam\/YbL"
+  "version": "59YwsPBa"
 };
