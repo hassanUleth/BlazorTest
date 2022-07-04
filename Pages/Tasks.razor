@@ -5,12 +5,29 @@
 
 <h1>Create a Task List</h1>
 
-<ul>
+@*<ul>
     @foreach (var task in TaskViewModel.Tasks)
     {
         <li>@task</li>
     }
-</ul>
+</ul>*@
+
+<table class="table"
+       width="50px">
+    <thead>
+    <tr>
+        <th>Task List</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var task in TaskViewModel.Tasks)
+    {
+        <tr>
+            <td>@task</td>
+        </tr>
+    }
+    </tbody>
+</table>
 
 <EditForm Model="TaskViewModel">
     <DataAnnotationsValidator />

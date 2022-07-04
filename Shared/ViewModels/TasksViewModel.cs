@@ -9,6 +9,9 @@ namespace BlazorDeploymentTest.Shared.ViewModels
         private string buttonText = "Click here to add task";
 
         [ObservableProperty]
+        private int count;
+
+        [ObservableProperty]
         private string currentTask;
 
         [ObservableProperty]
@@ -19,6 +22,7 @@ namespace BlazorDeploymentTest.Shared.ViewModels
         {
             this.Tasks.Add(currentTask);
             currentTask = string.Empty;
+            Count++;
         }
     }
 }
