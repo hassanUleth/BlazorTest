@@ -42,4 +42,9 @@ jobs:
         token: ${{ github.token }}
         branch: gh-pages
         folder: release/wwwroot
-
+    - name: UpdateVersion
+      uses: datamonsters/replace-action@v2
+      id: sub
+      with:
+        files: 'release/wwwroot/service-worker.published.js'
+        replacements: '%%CACHE_VERSION%%=${{ github.run_id }}'
