@@ -43,4 +43,4 @@ jobs:
         branch: gh-pages
         folder: release/wwwroot
     - name: UpdateVersion
-      run: sed -i 's/%%CACHE_VERSION%%/${{ github.run_id }}/g' release/wwwroot/service-worker.js
+      run: sed -i 's/const CACHE_VERSION = '%%CACHE_VERSION%%'/const CACHE_VERSION = ${{ github.run_id }}/g' release/wwwroot/service-worker.js
