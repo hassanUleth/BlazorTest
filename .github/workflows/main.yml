@@ -46,5 +46,5 @@ jobs:
       uses: datamonsters/replace-action@v2
       id: sub
       with:
-        files: 'BlazorTest/release/wwwroot/service-worker.published.js'
+        files: 's/<base href="\/" \/>/<base href="\/BlazorTest\/" \/>/g/release/wwwroot/service-worker.published.js'
         replacements: '%%CACHE_VERSION%%=${{ github.run_id }}'
