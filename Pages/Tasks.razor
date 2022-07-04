@@ -1,0 +1,30 @@
+﻿@page "/tasks"
+@using BlazorDeploymentTest.Shared.ViewModels
+@inject TasksViewModel TaskViewModel
+<PageTitle>Tasks</PageTitle>
+
+<h1>Create a Task List</h1>
+
+<ul>
+    @foreach (var task in TaskViewModel.Tasks)
+    {
+        <li>@task</li>
+    }
+</ul>
+
+<EditForm Model="TaskViewModel">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <InputText id="name" @bind-Value="TaskViewModel.CurrentTask" />
+
+    <button class="btn-primary" @onclick="TaskViewModel.AddTask">@TaskViewModel.ButtonText</button>
+</EditForm>
+
+
+
+
+
+@code {
+
+}
