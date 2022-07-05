@@ -21,6 +21,7 @@
   <ItemGroup>
     <Folder Include="Resources\DataFiles\" />
     <Folder Include="Resources\Images\" />
+    <Folder Include="Resources\Strings\" />
   </ItemGroup>
 
 </Project>
