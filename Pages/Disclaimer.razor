@@ -1,8 +1,71 @@
 ﻿@page "/disclaimer"
+@using BlazorDeploymentTest.Shared.ViewModels
+@using Microsoft.Extensions.Localization
+@using BlazorDeploymentTest.Shared.Enumerations
+@inject IStringLocalizer<Disclaimer> DisclaimerPageLocalizer
+@inject DisclaimerViewModel DisclaimerViewModel
+
+
+<style>
+    .scrollableTextbox {
+        height:300px;
+        width:80%;
+        font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+        font-size: 82%;
+        overflow:scroll;
+    }
+</style>
 
 <PageTitle>Disclaimer</PageTitle>
 
-<h3>Disclaimer</h3>
+<h1>@DisclaimerPageLocalizer["ProgramName"]</h1>
+
+<div style="text-align: left">
+    <img alt="holos logo" src="logo.png" width="200" />
+</div>
+
+<br>
+
+<div style="display:flex; flex-direction: row">
+    
+    <div style="width: 600px">
+        <h4>@DisclaimerPageLocalizer["SelectLanguageText"]</h4>
+    </div>
+    
+    <div style="width: 150px">
+        <select class="form-select" @bind="@DisclaimerViewModel.SelectedLanguage">
+            @foreach (var language in Enum.GetValues(typeof(Languages)))
+            {
+                <option value="@language">@language</option>
+            }
+        </select>
+    </div>
+
+</div>
+
+<p>@DisclaimerPageLocalizer["HolosDescriptionText"]</p>
+
+<br>
+
+<p>@DisclaimerPageLocalizer["EmailSubscriptionText"]</p>
+
+<br>
+
+
+
+
+<h4>@DisclaimerPageLocalizer["DisclaimerHeading"]</h4>
+
+<div style="">
+    <textarea class="scrollableTextbox">@DisclaimerPageLocalizer["DisclaimerText"]</textarea>
+</div>
+
+<br/>
+<br/>
+
+<div style="text-align: right">
+    <img alt="canada government logo" src="canada_gov_logo.png" width="200"/>
+</div>
 
 @code {
 

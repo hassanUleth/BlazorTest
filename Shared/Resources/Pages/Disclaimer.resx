@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DisclaimerHeading" xml:space="preserve">
+    <value>Disclaimer</value>
+  </data>
+  <data name="DisclaimerText" xml:space="preserve">
+    <value>Important Notices
+
+This software was designed primarily to encourage users to explore possible ways of reducing greenhouse gas emissions from farms. The estimates of emission are approximate, and may change appreciably as new scientific findings emerge. Agriculture and Agri-Food Canada does not warrant the reliability of this tool for uses other than education or exploratory gaming of possible practices.
+
+Copyright/Permission to Reproduce
+
+Material in this software were produced and/or compiled by Agriculture and Agri-Food Canada for the purpose of providing Canadians with information on greenhouse gas emissions from Canadian farms.
+
+The material in this software is covered by the provisions of the Copyright Act, by Canadian laws, policies, regulations and international agreements. Such provisions serve to identify the information source and, in specific instances, to prohibit reproduction of materials without written permission.
+
+Non-commercial Reproduction
+
+Information in this software has been posted with the intent that it be readily available for personal and public non-commercial use and may be reproduced, in part or in whole and by any means, without charge or further permission from Agriculture and Agri-Food Canada. We ask only that: 
+
+•	Users exercise due diligence in ensuring the accuracy of the materials reproduced; 
+•	Agriculture and Agri-Food Canada be identified as the source department; and, 
+•	The reproduction is not represented as an official version of the materials 
+	reproduced, nor as having been made, in affiliation with or with the endorsement of Agriculture and Agri-Food Canada. 
+	
+Commercial Reproduction
+
+Reproduction of multiple copies of material in this software , in whole or in part, for the purposes of commercial redistribution is prohibited except with written permission from the Government of Canada's copyright administrator, Communication Canada. Through the permission granting process, Communication Canada helps ensure individuals/organizations wishing to reproduce Government of Canada materials for commercial purposes have access to the most accurate, up-to-date versions. To obtain permission to reproduce materials on this CD for commercial purposes, please go to Communication Canada's " Applying for Copyright Clearance on Government of Canada Works" page. 
+
+Communication Canada
+Canadian Government Publishing Directorate
+Constitution Square Building, 4th Floor, 350 Albert Street
+Ottawa, Ontario
+Canada
+K1A 1M4
+
+or
+
+copyright.droitdauteur@communication.gc.ca
+Questions or comments regarding this policy, or the administration of the Privacy Act in Agriculture and Agri-Food Canada may be directed to the Privacy Co-ordinator by e-mail to jacquesd@agr.gc.ca or by calling (613) 759-7083 or writing to: 
+Danielle Jacques
+Acting Access to Information and Privacy Coordinator
+Agriculture and Agri-Food Canada
+930 Carling Avenue, Room 282
+Sir John Carling Building
+Ottawa, Ontario
+K1A 0C5
+
+If you are not satisfied with our response to your privacy concern, you may wish to contact the Office of the Privacy Commissioner.</value>
+  </data>
+  <data name="EmailSubscriptionText" xml:space="preserve">
+    <value>To be kept informed about future versions, please send your contact information (including email address) to holos@canada.ca</value>
+  </data>
+  <data name="EnglishLanguageText" xml:space="preserve">
+    <value>English/Anglais</value>
+  </data>
+  <data name="EnumEnglish" xml:space="preserve">
+    <value>English/Anglais</value>
+  </data>
+  <data name="EnumFrench" xml:space="preserve">
+    <value>Francais/French</value>
+  </data>
+  <data name="FrenchLanguageText" xml:space="preserve">
+    <value>Francais/French</value>
+  </data>
+  <data name="HolosDescriptionText" xml:space="preserve">
+    <value>Holos - a tool to estimate and reduce greenhouse gas emissions from farms.</value>
+  </data>
+  <data name="OkButtonText" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="ProgramName" xml:space="preserve">
+    <value>Holos 4</value>
+  </data>
+  <data name="SelectLanguageText" xml:space="preserve">
+    <value>Select your Language</value>
+  </data>
+  <data name="VersionNumber" xml:space="preserve">
+    <value>4.0.0.348</value>
+  </data>
+  <data name="VersionNumberText" xml:space="preserve">
+    <value>Version Number</value>
+  </data>
+</root>

@@ -5,12 +5,18 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <ServiceWorkerAssetsManifest>service-worker-assets.js</ServiceWorkerAssetsManifest>
+	<BlazorWebAssemblyLoadAllGlobalizationData>true</BlazorWebAssemblyLoadAllGlobalizationData>
   </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="Shared\Resources\ProgramStrings.fr.resx" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0-preview4" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.5" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.5" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.Extensions.Localization" Version="6.0.6" />
     <PackageReference Include="System.ObjectModel" Version="4.3.0" />
   </ItemGroup>
 
@@ -19,9 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Resources\DataFiles\" />
-    <Folder Include="Resources\Images\" />
-    <Folder Include="Resources\Strings\" />
+    <None Include="Shared\Resources\Pages\Disclaimer.fr.resx" />
   </ItemGroup>
 
 </Project>
