@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Components;
 
 namespace BlazorDeploymentTest.Shared.ViewModels
 {
-    public partial class DisclaimerViewModel : BaseViewModel
+    public partial class DisclaimerViewModel : ViewModelBase
     {
         public DisclaimerViewModel()
         {

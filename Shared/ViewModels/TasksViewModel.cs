@@ -3,7 +3,7 @@ using CommunityToolkit.Mvvm.Input;
 
 namespace BlazorDeploymentTest.Shared.ViewModels
 {
-    public partial class TasksViewModel : BaseViewModel
+    public partial class TasksViewModel : ViewModelBase
     {
         [ObservableProperty] 
         private string buttonText = "Click here to add task";
