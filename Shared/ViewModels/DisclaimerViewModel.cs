@@ -2,6 +2,7 @@
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Microsoft.AspNetCore.Components;
+using System.Collections.ObjectModel;
 
 namespace BlazorDeploymentTest.Shared.ViewModels
 {
@@ -19,6 +20,9 @@ namespace BlazorDeploymentTest.Shared.ViewModels
             get => _selectedLanguage;
             set => SetProperty(ref _selectedLanguage, value);
         }
+
+        public ObservableCollection<Languages> Languages { get; set; } = new ObservableCollection<Languages>(Enum.GetValues(typeof(Languages)).Cast<Languages>());
+
 
 
         public void OnChangeLanguage(ChangeEventArgs e)

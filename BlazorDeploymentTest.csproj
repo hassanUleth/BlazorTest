@@ -9,10 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <EmbeddedResource Remove="Shared\Resources\ProgramStrings.fr.resx" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0-preview4" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.5" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.5" PrivateAssets="all" />
@@ -25,7 +21,28 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="Shared\Resources\Pages\Disclaimer.fr.resx" />
+    <None Include="Shared\Resources\ProgramStrings.fr.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Shared\Resources\Pages\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Shared\Resources\ProgramStrings.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ProgramStrings.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Shared\Resources\ProgramStrings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ProgramStrings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>

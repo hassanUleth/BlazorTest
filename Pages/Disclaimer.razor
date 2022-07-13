@@ -2,7 +2,7 @@
 @using BlazorDeploymentTest.Shared.ViewModels
 @using Microsoft.Extensions.Localization
 @using BlazorDeploymentTest.Shared.Enumerations
-@inject IStringLocalizer<Disclaimer> DisclaimerPageLocalizer
+@inject IStringLocalizer<ProgramStrings> programStrings
 @inject DisclaimerViewModel DisclaimerViewModel
 
 
@@ -18,7 +18,7 @@
 
 <PageTitle>Disclaimer</PageTitle>
 
-<h1>@DisclaimerPageLocalizer["ProgramName"]</h1>
+<h1>@programStrings["ProgramName"]</h1>
 
 <div style="text-align: left">
     <img alt="holos logo" src="logo.png" width="200" />
@@ -29,12 +29,12 @@
 <div style="display:flex; flex-direction: row">
     
     <div style="width: 600px">
-        <h4>@DisclaimerPageLocalizer["SelectLanguageText"]</h4>
+        <h4>@programStrings["SelectLanguageText"]</h4>
     </div>
     
     <div style="width: 150px">
         <select class="form-select" @bind="@DisclaimerViewModel.SelectedLanguage">
-            @foreach (var language in Enum.GetValues(typeof(Languages)))
+            @foreach (var language in Enum.GetNames(typeof(Languages)))
             {
                 <option value="@language">@language</option>
             }
@@ -43,21 +43,21 @@
 
 </div>
 
-<p>@DisclaimerPageLocalizer["HolosDescriptionText"]</p>
+<p>@programStrings["HolosDescriptionText"]</p>
 
 <br>
 
-<p>@DisclaimerPageLocalizer["EmailSubscriptionText"]</p>
+<p>@programStrings["EmailSubscriptionText"]</p>
 
 <br>
 
 
 
 
-<h4>@DisclaimerPageLocalizer["DisclaimerHeading"]</h4>
+<h4>@programStrings["DisclaimerHeading"]</h4>
 
 <div style="">
-    <textarea class="scrollableTextbox">@DisclaimerPageLocalizer["DisclaimerText"]</textarea>
+    <textarea class="scrollableTextbox">@programStrings["DisclaimerText"]</textarea>
 </div>
 
 <br/>
