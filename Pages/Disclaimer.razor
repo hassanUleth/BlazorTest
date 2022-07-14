@@ -2,8 +2,10 @@
 @using BlazorDeploymentTest.Shared.ViewModels
 @using Microsoft.Extensions.Localization
 @using BlazorDeploymentTest.Shared.Enumerations
+@using BlazorDeploymentTest.Shared.Components
 @inject IStringLocalizer<ProgramStrings> programStrings
 @inject DisclaimerViewModel DisclaimerViewModel
+
 
 
 <style>
@@ -33,12 +35,7 @@
     </div>
     
     <div style="width: 150px">
-        <select class="form-select" @bind="@DisclaimerViewModel.SelectedLanguage">
-            @foreach (var language in Enum.GetNames(typeof(Languages)))
-            {
-                <option value="@language">@language</option>
-            }
-        </select>
+        <CultureSelector />
     </div>
 
 </div>

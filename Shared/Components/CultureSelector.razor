@@ -1,4 +1,17 @@
-﻿<h3>CultureDropdown</h3>
+﻿@using BlazorDeploymentTest.Shared.ViewModels
+@inject CultureSelectorViewModel CultureSelectorViewModel
+@inject IStringLocalizer<ProgramStrings> programStrings
+@inject DisclaimerViewModel DisclaimerViewModel
+
+
+<select class="form-select" @bind="@CultureSelectorViewModel.Culture">
+    @foreach (var culture in CultureSelectorViewModel.AvailableCultures)
+    {
+        <option value="@culture">@culture.DisplayName</option>
+    }
+
+</select>
+
 
 @code {
 

@@ -5,6 +5,7 @@ using BlazorDeploymentTest.Shared.ViewModels;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.Localization;
+using BlazorDeploymentTest.Shared.Extensions;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
@@ -16,5 +17,9 @@ builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.
 builder.Services.AddScoped<TasksViewModel>();
 builder.Services.AddScoped<Disclaimer>();
 builder.Services.AddSingleton<DisclaimerViewModel>();
+builder.Services.AddSingleton<CultureSelectorViewModel>();
 
-await builder.Build().RunAsync();
+var host = builder.Build();
+await host.SetDefaultCulture();
+
+await host.RunAsync();
