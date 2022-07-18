@@ -21,7 +21,8 @@ namespace BlazorDeploymentTest.Shared.ViewModels
             set => SetProperty(ref _selectedLanguage, value);
         }
 
-        public ObservableCollection<Languages> Languages { get; set; } = new ObservableCollection<Languages>(Enum.GetValues(typeof(Languages)).Cast<Languages>());
+        [ObservableProperty]
+        private ObservableCollection<Languages> languages = new ObservableCollection<Languages>(Enum.GetValues(typeof(Languages)).Cast<Languages>());
 
 
 

@@ -117,8 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="CounterPageNavigationTitle" xml:space="preserve">
+    <value>Compteur</value>
+  </data>
   <data name="DisclaimerHeading" xml:space="preserve">
     <value>Avis de non-responsabilité</value>
+  </data>
+  <data name="DisclaimerPageNavigationTitle" xml:space="preserve">
+    <value>Désistement</value>
   </data>
   <data name="DisclaimerText" xml:space="preserve">
     <value>Avis importants
@@ -177,11 +183,20 @@ Si notre réponse à vos préoccupations au sujet de la protection des renseigne
   <data name="EnumFrench" xml:space="preserve">
     <value>Français/French</value>
   </data>
+  <data name="FetchDataPageNavigationTitle" xml:space="preserve">
+    <value>Extraire les données</value>
+  </data>
   <data name="FrenchLanguageText" xml:space="preserve">
     <value>Français/French</value>
   </data>
   <data name="HolosDescriptionText" xml:space="preserve">
     <value>Holos - un outil pour estimer et réduire les émissions de gaz à effet de serre des exploitations agricoles.</value>
+  </data>
+  <data name="HomePageNavigationTitle" xml:space="preserve">
+    <value>Page d'accueil</value>
+  </data>
+  <data name="MyTasksPageNavigationTitle" xml:space="preserve">
+    <value>Mes tâches</value>
   </data>
   <data name="OkButtonText" xml:space="preserve">
     <value>Ok</value>

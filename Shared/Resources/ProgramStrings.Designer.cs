@@ -61,11 +61,29 @@ namespace BlazorDeploymentTest.Shared.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Counter.
+        /// </summary>
+        public static string CounterPageNavigationTitle {
+            get {
+                return ResourceManager.GetString("CounterPageNavigationTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Disclaimer.
         /// </summary>
         public static string DisclaimerHeading {
             get {
                 return ResourceManager.GetString("DisclaimerHeading", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Disclaimer.
+        /// </summary>
+        public static string DisclaimerPageNavigationTitle {
+            get {
+                return ResourceManager.GetString("DisclaimerPageNavigationTitle", resourceCulture);
             }
         }
         
@@ -121,6 +139,15 @@ namespace BlazorDeploymentTest.Shared.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Fetch Data.
+        /// </summary>
+        public static string FetchDataPageNavigationTitle {
+            get {
+                return ResourceManager.GetString("FetchDataPageNavigationTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Francais/French.
         /// </summary>
         public static string FrenchLanguageText {
@@ -135,6 +162,24 @@ namespace BlazorDeploymentTest.Shared.Resources {
         public static string HolosDescriptionText {
             get {
                 return ResourceManager.GetString("HolosDescriptionText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Home.
+        /// </summary>
+        public static string HomePageNavigationTitle {
+            get {
+                return ResourceManager.GetString("HomePageNavigationTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to My Tasks.
+        /// </summary>
+        public static string MyTasksPageNavigationTitle {
+            get {
+                return ResourceManager.GetString("MyTasksPageNavigationTitle", resourceCulture);
             }
         }
         

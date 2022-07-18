@@ -1,4 +1,5 @@
 ﻿@using BlazorDeploymentTest.Shared.ViewModels
+@using BlazorDeploymentTest.Shared.Helpers
 @inject CultureSelectorViewModel CultureSelectorViewModel
 @inject IStringLocalizer<ProgramStrings> programStrings
 @inject DisclaimerViewModel DisclaimerViewModel
@@ -7,7 +8,7 @@
 <select class="form-select" @bind="@CultureSelectorViewModel.Culture">
     @foreach (var culture in CultureSelectorViewModel.AvailableCultures)
     {
-        <option value="@culture">@culture.DisplayName</option>
+        <option value="@culture.CultureType">@culture.Language.GetDisplayName()</option>
     }
 
 </select>
