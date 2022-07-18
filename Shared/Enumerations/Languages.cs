@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using BlazorDeploymentTest.Shared.Helpers;
+using BlazorDeploymentTest.Shared.Resources;
+using System.ComponentModel.DataAnnotations;
 using System.Xml.Linq;
 
 namespace BlazorDeploymentTest.Shared.Enumerations
@@ -6,10 +8,10 @@ namespace BlazorDeploymentTest.Shared.Enumerations
     
     public enum Languages
     {
-        [Display(Name = "English Language")]
+        [Display(Name = "EnumEnglish", ResourceType=typeof(ProgramStrings))]
         English,
 
-        [Display(Name = "French Language")]
+        [Display(Name = "EnumFrench", ResourceType=typeof(ProgramStrings))]
         French
     }
 }
