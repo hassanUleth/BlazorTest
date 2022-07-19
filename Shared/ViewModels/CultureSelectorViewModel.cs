@@ -7,11 +7,9 @@ namespace BlazorDeploymentTest.Shared.ViewModels
 {
     public class CultureSelectorViewModel
     {
+        private readonly NavigationManager? _navManager;
 
-        public NavigationManager? NavManager { get; set; }
-
-
-        public IJSRuntime? JSRuntime { get; set; }
+        private readonly IJSRuntime? _jsRuntime;
 
         /// <summary>
         /// Tuple of Language Enumeration and CultureInfo. This tuple is initialized with languages currently available in the program. The list is created as a
@@ -25,21 +23,39 @@ namespace BlazorDeploymentTest.Shared.ViewModels
 
         public CultureSelectorViewModel(NavigationManager? navManager, IJSRuntime? jSRuntime)
         {
-            NavManager = navManager;
-            JSRuntime = jSRuntime;
+            _navManager = navManager;
+            _jsRuntime = jSRuntime;
         }
 
+        /// <summary>
+        /// Creates a culture property. The culture property is set to user selection using a javascript script that stores
+        /// the culture in localstorage. The set method then reloads the page to apply the new culture.
+        /// </summary>
         public CultureInfo Culture
         {
             get => CultureInfo.CurrentCulture;
             set
             {
-                if (CultureInfo.CurrentCulture != value)
+                if (CultureInfo.CurrentCulture == value)
                 {
-                    var js = JSRuntime as IJSInProcessRuntime;
-                    js?.InvokeVoid("blazorCulture.set", value.Name);
-                    NavManager?.NavigateTo(NavManager.Uri, forceLoad: true);
+                    return;
                 }
+                _ = SetCultureValue(value);
+                _navManager?.NavigateTo(_navManager.Uri, forceLoad: true);
+            }
+        }
+
+        /// <summary>
+        /// Loads a javascript module and uses InvokeVoidAsync to set the value of the culture.
+        /// </summary>
+        /// <param name="cultureValue"></param>
+        /// <returns></returns>
+        private async Task SetCultureValue(CultureInfo cultureValue)
+        {
+            if (_jsRuntime != null)
+            {
+                var jsModule = await _jsRuntime.InvokeAsync<IJSObjectReference>("import", "./scripts/blazorCulture.js");
+                await jsModule.InvokeVoidAsync("setBlazorCulture", cultureValue.Name);
             }
         }
     }

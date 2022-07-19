@@ -1,16 +1,20 @@
 ﻿using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.JSInterop;
 using System.Globalization;
+// ReSharper disable InconsistentNaming
 
 namespace BlazorDeploymentTest.Shared.Extensions
 {
     public static class WebAssemblyHostExtension
     {
-        private static string _defaultCulture = "en-CA";
-        public async static Task SetDefaultCulture(this WebAssemblyHost host)
+        private const string DefaultCulture = "en-CA";
+        private static IJSObjectReference? s_jsModule;
+
+        public static async Task SetDefaultCulture(this WebAssemblyHost host)
         {
-            var jsInterop = host.Services.GetRequiredService<IJSRuntime>();
-            var result = await jsInterop.InvokeAsync<string>("blazorCulture.get");
+            var jsRuntime = host.Services.GetRequiredService<IJSRuntime>();
+            s_jsModule = await jsRuntime.InvokeAsync<IJSObjectReference>("import", "./scripts/blazorCulture.js");
+            var result = await s_jsModule.InvokeAsync<string>("getBlazorCulture");
 
             CultureInfo cultureInfo;
 
@@ -20,8 +24,8 @@ namespace BlazorDeploymentTest.Shared.Extensions
             }
             else
             {
-                cultureInfo = new CultureInfo(_defaultCulture);
-                await jsInterop.InvokeVoidAsync("blazorCulture.set", _defaultCulture);
+                cultureInfo = new CultureInfo(DefaultCulture);
+                await s_jsModule.InvokeVoidAsync("setBlazorCulture", DefaultCulture);
             }
 
             CultureInfo.DefaultThreadCurrentCulture = cultureInfo;
